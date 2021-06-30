@@ -3,8 +3,8 @@ import numpy as np
 import os, re
 
 # 파일 경로 지정
-search_dir = ".\\101_ObjectCategories"
-cache_dir = ".\\cache_avghash"
+search_dir = "./101_ObjectCategories"
+cache_dir = "./cache_avghash"
 
 if not os.path.exists(cache_dir):  # cache 파일이 없을경우 생성
     os.mkdir(cache_dir)
@@ -13,7 +13,7 @@ if not os.path.exists(cache_dir):  # cache 파일이 없을경우 생성
 def average_hash(fname, size=16):
     fname2= fname[len(search_dir):]
     # img cache
-    cache_file = cache_dir+"\\"+fname2.replace('\\','_')+ ".csv"
+    cache_file = cache_dir+"/"+fname2.replace('/','_')+ ".csv"
     if not os.path.exists(cache_file):
         img = Image.open(fname)
         img = img.convert('L').resize((size, size), Image.ANTIALIAS)
@@ -51,7 +51,7 @@ def find_image(fname, rate):
             yield (diff_r, fname)
 
 # 찾기
-srcfile = search_dir+"\\chair\\image_0016.jpg"
+srcfile = search_dir+"/chair/image_0016.jpg"
 html = ""
 sim = list(find_image(srcfile, 0.25))
 sim = sorted(sim, key=lambda x:x[0])
