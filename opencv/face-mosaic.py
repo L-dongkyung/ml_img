@@ -12,7 +12,7 @@ mosaic_rate = 30
 # 캐스캐이드 파일 경로 지정하기
 cascade_file = "haarcascade/haarcascade_frontalface_alt.xml"
 
-# 이미지 읽기
+# 이미지 읽기9
 image = cv2.imread(image_file)
 image_gs = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
