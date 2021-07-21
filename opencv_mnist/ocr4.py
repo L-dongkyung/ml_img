@@ -6,7 +6,7 @@ import imutils
 
 # mnist 학습뎅터 읽어들이기
 mnist = orc_mnist.build_model()
-mnist.load_weights('mnist.hdf5')
+mnist.load_weights('font_draw.hdf5')
 # 이미지 읽어 들이기
 im = cv2.imread('numbers100.png')
 
@@ -41,7 +41,7 @@ for i, r in enumerate(rects):
     num = gray[y:y+h, x:x+w]
     num = 255 - num
     # 정사각형 내부에 그림 옮기기
-    ww = round((w if w>h else h) * 1.85) # 48
+    ww = round((w if w>h else h) * 1.2) # 48
     spc = np.zeros((ww,ww)) #48,48
     wy = (ww - h)//2    # 13
     wx = (ww - w)//2    # 16

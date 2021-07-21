@@ -3,7 +3,7 @@ import sys
 
 
 # 입력 파일 저장
-image_file = "./face_0088.jpg"
+image_file = "./onegirl.jpg"
 
 # 케스케이드 파일의 경로 지정하기 - 1
 cascade_file = "./haarcascade/haarcascade_frontalface_alt.xml"
